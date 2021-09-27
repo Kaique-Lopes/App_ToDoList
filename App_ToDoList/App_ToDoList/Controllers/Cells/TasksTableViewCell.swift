@@ -8,6 +8,9 @@
 import UIKit
 
 class TasksTableViewCell: UITableViewCell {
-
-
+    @IBOutlet weak var hourLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var taskLabelName: UILabel!
+    
 }
