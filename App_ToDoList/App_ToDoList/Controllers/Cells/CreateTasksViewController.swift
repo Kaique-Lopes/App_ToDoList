@@ -46,9 +46,29 @@ class CreateTasksViewController: UITableViewController {
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell", for: indexPath) as! DateTimeTableViewCell
+        cell.dateTimeTextField.inputView = datePicker
+        cell.dateTimeTextField.inputAccessoryView = acessoryView()
         return cell
     }
+    
+    // MARK: - Functions
+    
     @IBAction func saveButton(_ sender: Any) {
         print("Task saveButton")
+    }
+    
+    func acessoryView() -> UIView {
+       let toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.isTranslucent = true
+        let barItemSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(CreateTasksViewController.selectDate))
+        toolbar.setItems([barItemSpace,doneButton], animated: true)
+        toolbar.isUserInteractionEnabled = true
+        toolbar.sizeToFit()
+        return toolbar
+    }
+    @objc func selectDate() {
+        
     }
 }
