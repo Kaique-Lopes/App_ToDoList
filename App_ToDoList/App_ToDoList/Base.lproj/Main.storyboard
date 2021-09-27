@@ -93,11 +93,46 @@
                             <outlet property="delegate" destination="xXr-gY-3y1" id="y3j-g7-PHe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Tasks" id="U0w-Gd-JdC"/>
+                    <navigationItem key="navigationItem" title="My Tasks" id="U0w-Gd-JdC">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="ByT-CO-HdD">
+                            <connections>
+                                <segue destination="qiz-xV-csT" kind="show" id="ZOZ-bW-RFh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XS8-Fq-AtG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578.97196261682245" y="161.98704103671707"/>
+        </scene>
+        <!--Create Task-->
+        <scene sceneID="VjI-8K-nDo">
+            <objects>
+                <tableViewController id="qiz-xV-csT" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MN7-Xa-3Vk">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vqu-oY-8Qb">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vqu-oY-8Qb" id="bgN-o9-nDy">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qiz-xV-csT" id="p1A-qc-Mpo"/>
+                            <outlet property="delegate" destination="qiz-xV-csT" id="hBn-4b-wMu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Create Task" id="toW-zP-pni"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6A-Cn-qSv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546" y="162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xa3-wM-d8C">
@@ -117,6 +152,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
