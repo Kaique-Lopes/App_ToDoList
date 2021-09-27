@@ -15,7 +15,8 @@ let tasks: [Task] = [
 ]
 
 class TasksTableViewController: UITableViewController {
-
+    private dateFormatter: DateFormatter = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +34,11 @@ class TasksTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TasksTableViewCell
+        let task = tasks[indexPath.row]
+        
+        dateFormatter.dateFormat = "HH:mm"
+        cell.hourLabel = dateFormatter.string(from: task.date)
         
     }
 }
