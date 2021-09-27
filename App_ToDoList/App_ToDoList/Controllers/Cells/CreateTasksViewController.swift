@@ -7,8 +7,9 @@
 
 import UIKit
 
-class CreateTasksViewController: UITableViewController {
+class CreateTasksViewController: UITableViewController, UITextFieldDelegate{
     private let datePicker = UIDatePicker()
+    private var selectIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +48,17 @@ class CreateTasksViewController: UITableViewController {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell", for: indexPath) as! DateTimeTableViewCell
         cell.dateTimeTextField.inputView = datePicker
+        cell.dateTimeTextField.delegate = self
         cell.dateTimeTextField.inputAccessoryView = acessoryView()
         return cell
     }
-    
+    // MARK: - TextFieldDelegate Methods
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let cell =textField.superview?.superview as? DateTimeTableViewCell
+        if dateCell = cell {
+            self.selectIndexPath = tableView.indexPath(for: dateCell)
+        }
+    }
     // MARK: - Functions
     
     @IBAction func saveButton(_ sender: Any) {
