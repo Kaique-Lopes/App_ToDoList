@@ -8,15 +8,12 @@
 import UIKit
 
 class CreateTasksViewController: UITableViewController {
-
+    private let datePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        datePicker.datePickerMode = .dateAndTime
     }
 
     // MARK: - Table view data source
@@ -50,5 +47,8 @@ class CreateTasksViewController: UITableViewController {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell", for: indexPath) as! DateTimeTableViewCell
         return cell
+    }
+    @IBAction func saveButton(_ sender: Any) {
+        print("Task saveButton")
     }
 }
