@@ -7,6 +7,13 @@
 
 import UIKit
 
+let category = Category(name: "Work", color: UIColor.green)
+
+let tasks: [Task] = [
+    Task(name: "Minha primeira task", date: Date(), category: category),
+    Task(name: "Minha segunda task", date: Date(), category: category)
+]
+
 class TasksTableViewController: UITableViewController {
 
     override func viewDidLoad() {
