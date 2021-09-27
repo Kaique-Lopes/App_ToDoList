@@ -108,21 +108,21 @@
         <!--Create Task-->
         <scene sceneID="VjI-8K-nDo">
             <objects>
-                <tableViewController id="qiz-xV-csT" sceneMemberID="viewController">
+                <tableViewController id="qiz-xV-csT" customClass="CreateTasksViewController" customModule="App_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MN7-Xa-3Vk">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskDescriptionCell" id="vqu-oY-8Qb">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="35.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskDescriptionCell" id="vqu-oY-8Qb" customClass="TaskDescriptionTableViewCell" customModule="App_ToDoList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="35.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vqu-oY-8Qb" id="bgN-o9-nDy">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="35.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="35.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Your Task Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bg4-Ub-Xlk">
-                                            <rect key="frame" x="20" y="8.0000000000000018" width="388" height="19.666666666666671"/>
+                                            <rect key="frame" x="20" y="7.9999999999999982" width="388" height="19.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -134,9 +134,12 @@
                                         <constraint firstAttribute="bottom" secondItem="bg4-Ub-Xlk" secondAttribute="bottom" constant="8" id="ZEM-xe-rxM"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="taskDescriptionTextField" destination="bg4-Ub-Xlk" id="Fcb-nA-Jzw"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="W90-Oa-boE" style="IBUITableViewCellStyleDefault" id="VWZ-Zl-UhF">
-                                <rect key="frame" x="0.0" y="60.000001907348633" width="428" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="59.666666030883789" width="428" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VWZ-Zl-UhF" id="tJd-yh-WPU">
                                     <rect key="frame" x="0.0" y="0.0" width="398.33333333333331" height="43.666667938232422"/>
@@ -152,8 +155,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="51" id="n0L-js-u5t">
-                                <rect key="frame" x="0.0" y="103.66666984558105" width="428" height="51"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="51" id="n0L-js-u5t" customClass="DateTimeTableViewCell" customModule="App_ToDoList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="103.33333396911621" width="428" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n0L-js-u5t" id="75N-6s-8YN">
                                     <rect key="frame" x="0.0" y="0.0" width="398.33333333333331" height="51"/>
@@ -178,6 +181,9 @@
                                         <constraint firstItem="36w-wR-ixP" firstAttribute="top" secondItem="75N-6s-8YN" secondAttribute="top" constant="8" id="qQy-jB-X7q"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateTimeTextField" destination="36w-wR-ixP" id="oQo-Z2-2bG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
