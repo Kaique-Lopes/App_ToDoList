@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="93" id="aOz-cl-tvj" customClass="TasksTableViewCell" customModule="App_ToDoList" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="93" id="aOz-cl-tvj" customClass="TasksTableViewCell" customModule="App_ToDoList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="93"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TasksTableViewCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aOz-cl-tvj" id="yDb-Ij-6HY">
@@ -75,6 +75,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoryNameLabel" destination="GqN-CV-Mtu" id="uIK-oi-ftD"/>
+                                    <outlet property="categoryView" destination="fKl-Mt-jSt" id="NNv-6l-mUS"/>
                                     <outlet property="dateLabel" destination="m77-Bl-EIk" id="nCf-gi-Qm9"/>
                                     <outlet property="hourLabel" destination="b4B-Fc-9Ch" id="b4x-lM-325"/>
                                     <outlet property="taskLabelName" destination="yJR-v2-Jeu" id="3Q7-GI-IAj"/>
