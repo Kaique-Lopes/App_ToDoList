@@ -15,7 +15,7 @@ let tasks: [Task] = [
 ]
 
 class TasksTableViewController: UITableViewController {
-    private dateFormatter: DateFormatter = DateFormatter()
+    private let dateFormatter: DateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,16 @@ class TasksTableViewController: UITableViewController {
         let task = tasks[indexPath.row]
         
         dateFormatter.dateFormat = "HH:mm"
-        cell.hourLabel = dateFormatter.string(from: task.date)
+        cell.hourLabel.text = dateFormatter.string(from: task.date)
+        
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        cell.hourLabel.text = dateFormatter.string(from: task.date)
+        
+        cell.categoryNameLabel.text = task.category.name
+        cell.categoryView.backgroundColor = task.category.color
+        cell.taskLabelName.text = task.name
+        
+        return cell
         
     }
 }
