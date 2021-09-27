@@ -115,14 +115,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskDescriptionCell" id="vqu-oY-8Qb" customClass="TaskDescriptionTableViewCell" customModule="App_ToDoList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="35.333332061767578"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="35"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vqu-oY-8Qb" id="bgN-o9-nDy">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="35.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="35"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Your Task Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bg4-Ub-Xlk">
-                                            <rect key="frame" x="20" y="7.9999999999999982" width="388" height="19.333333333333329"/>
+                                            <rect key="frame" x="20" y="8" width="388" height="19"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -139,7 +139,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="W90-Oa-boE" style="IBUITableViewCellStyleDefault" id="VWZ-Zl-UhF">
-                                <rect key="frame" x="0.0" y="59.666666030883789" width="428" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="59.333333969116211" width="428" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VWZ-Zl-UhF" id="tJd-yh-WPU">
                                     <rect key="frame" x="0.0" y="0.0" width="398.33333333333331" height="43.666667938232422"/>
@@ -156,7 +156,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="51" id="n0L-js-u5t" customClass="DateTimeTableViewCell" customModule="App_ToDoList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="103.33333396911621" width="428" height="51"/>
+                                <rect key="frame" x="0.0" y="103.00000190734863" width="428" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n0L-js-u5t" id="75N-6s-8YN">
                                     <rect key="frame" x="0.0" y="0.0" width="398.33333333333331" height="51"/>
