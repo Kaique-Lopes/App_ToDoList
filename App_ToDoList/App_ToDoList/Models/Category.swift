@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+struct Category {
+    var name = String()
+    var id = UUID()
+    var color: UIColor = UIColor.black
+}
