@@ -12,5 +12,4 @@ struct Task {
     var name: String()
     var date: Date = Date()
     var category: Category = Category(name: "Marketing", color: UIColor.black)
-
 }
