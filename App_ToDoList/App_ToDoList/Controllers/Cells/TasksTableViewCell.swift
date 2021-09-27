@@ -13,5 +13,4 @@ class TasksTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var taskLabelName: UILabel!
     @IBOutlet weak var categoryView: UIView!
-    
 }
