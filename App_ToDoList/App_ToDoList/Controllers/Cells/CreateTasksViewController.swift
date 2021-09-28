@@ -10,6 +10,7 @@ import UIKit
 class CreateTasksViewController: UITableViewController, UITextFieldDelegate{
     private let datePicker = UIDatePicker()
     private var selectIndexPath: IndexPath?
+    private var dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +55,8 @@ class CreateTasksViewController: UITableViewController, UITextFieldDelegate{
     }
     // MARK: - TextFieldDelegate Methods
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        let cell =textField.superview?.superview as? DateTimeTableViewCell
-        if dateCell = cell {
+        let cell = textField.superview?.superview as? DateTimeTableViewCell
+        if let dateCell = cell {
             self.selectIndexPath = tableView.indexPath(for: dateCell)
         }
     }
@@ -77,6 +78,14 @@ class CreateTasksViewController: UITableViewController, UITextFieldDelegate{
         return toolbar
     }
     @objc func selectDate() {
-        
+        if let indexPath = self.selectIndexPath {
+            let cell = tableView.cellForRow(at: indexPath) as? DateTimeTableViewCell
+            if let dateCell = cell {
+                dateCell.dateTimeTextField.text = dateFormatter.string(from: datePicker.date)
+                
+            }
+            
+            
+        }
     }
 }
